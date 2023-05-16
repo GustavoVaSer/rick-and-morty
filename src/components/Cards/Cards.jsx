@@ -1,7 +1,11 @@
 import Card from '../Card/Card.jsx';
 
 export default function Cards({characters}) {
-   // const { characters } = props;
+   // const cardsContainer = {
+   //    display: "flex",
+   //    flexwrap: "wrap",
+   //    justifyContent: "space-evenly"
+   // }
    return (
       <div style={{display:"flex", justifyContent: "space-between"}}>
          {characters.map(character => (
