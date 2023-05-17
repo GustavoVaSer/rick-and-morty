@@ -1,6 +1,8 @@
 import Card from '../Card/Card.jsx';
 
-export default function Cards({characters}) {
+export default function Cards(props) {
+
+   const {characters} = props;
    // const cardsContainer = {
    //    display: "flex",
    //    flexwrap: "wrap",
@@ -17,7 +19,7 @@ export default function Cards({characters}) {
                gender={character.gender}
                origin={character.origin?.name}
                image={character.image}
-               onClose={() => window.alert('Emulamos que se cierra la card')}
+               onClose={() => props.onClose(character.id)}
             /> 
          ))}
       </div>
