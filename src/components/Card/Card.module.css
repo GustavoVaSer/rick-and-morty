@@ -51,12 +51,16 @@
 .favoriteButton {
     /* Estilos para el botón de favorito cuando está activo */
     background-color: purple;
+    box-shadow: 2px;
+    border-radius: 8px;
     /* ... */
  }
 
  .unfavoriteButton {
     /* Estilos para el botón de favorito cuando no está activo */
     background-color: white;
+    box-shadow: 2px;
+    border-radius: 8px;
     /* ... */
  }
 

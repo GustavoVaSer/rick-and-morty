@@ -7,12 +7,13 @@ import { createRoot } from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Redux/store';
 
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
-createRoot(document.getElementById('root')).render(
+root.render(
   <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 )

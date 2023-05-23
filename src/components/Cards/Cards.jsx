@@ -2,29 +2,26 @@ import Card from '../Card/Card.jsx';
 import React from 'react';
 import data from '../../data.js';
 
-export default function Cards(props) {
-
-   const {characters} = props;
-   // const cardsContainer = {
-   //    display: "flex",
-   //    flexwrap: "wrap",
-   //    justifyContent: "space-evenly"
-   // }
+export default function Cards({ characters, onClose, numberOfCards }) {
    return (
-      <div style={{display:"flex", justifyContent: "space-between"}}>
-         {characters.map(character => (
-            <Card
-               id={character.id}
-               key={character.id}
-               name={character.name}
-               status={character.status}
-               species={character.species}
-               gender={character.gender}
-               origin={character.origin?.name}
-               image={character.image}
-               onClose={() => props.onClose(character.id)}
-            /> 
-         ))}
+      <div>
+         <h4 className={StyleSheet.title}> {numberOfCards} of 826 Characters</h4>
+         <div style={{ display: "flex", justifyContent: "space-between" }}>
+            {characters.map(character => (
+               <Card
+                  id={character.id}
+                  key={character.id}
+                  name={character.name}
+                  status={character.status}
+                  species={character.species}
+                  gender={character.gender}
+                  origin={character.origin?.name}
+                  image={character.image}
+                  onClose={onClose}
+               />
+            ))}
+         </div>
       </div>
    );
 };
+
