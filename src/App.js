@@ -8,6 +8,7 @@ import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
 import Form from './components/form/Form.jsx';
 import { createRoot } from 'react-dom';
+import Favorites from './components/favorites/Favorites';
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
                <Cards characters={characters} onClose={onClose} />}/>
             <Route path="/about" element={<About />}/>
             <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/favorites" element={<Favorites />}/>
          </Routes>
       </div>
    );

@@ -1,4 +1,6 @@
 import Card from '../Card/Card.jsx';
+import React from 'react';
+import data from '../../data.js';
 
 export default function Cards(props) {
 

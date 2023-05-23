@@ -48,3 +48,15 @@
     color: black
 }
 
+.favoriteButton {
+    /* Estilos para el botón de favorito cuando está activo */
+    background-color: purple;
+    /* ... */
+ }
+
+ .unfavoriteButton {
+    /* Estilos para el botón de favorito cuando no está activo */
+    background-color: white;
+    /* ... */
+ }
+
