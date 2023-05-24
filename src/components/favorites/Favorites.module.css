@@ -10,3 +10,17 @@
         box-shadow: 0 0 50px purple;
     }
 }
+
+.selector {
+        border-radius: 8px;
+        height: 30px;
+        background-color: #0a527c;
+        color:  white;
+        border: 0px;
+        padding: 5px;
+        margin-right: 10px;
+        flex: auto;
+        &:hover {
+            background-color: red;
+        }
+}
