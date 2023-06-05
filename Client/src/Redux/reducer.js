@@ -12,21 +12,10 @@ export default function reducer(
     switch (type) {
         case ADD_FAV:
             return { ...state, myFavorites: payload, allCharacters: payload };
-            // return {
-            //     ...state,
-            //     myFavorites: [...state.allCharacters, payload],
-            //     allCharacters: [...state.allCharacters, payload]
-            // }
+            
         case REMOVE_FAV:
             return { ...state, myFavorites: payload };
-            // const filteredFavs = state.allCharacters.filter(
-            //     fav => fav.id !== Number(payload)
-            // )
-            // return {
-            //     ...state,
-            //     myFavorites: filteredFavs,
-            //     allCharacters: filteredFavs
-            // }
+            
         case FILTER:
             // EXTRA: => Caso "All"
             if (payload === "All") return {

@@ -12,12 +12,6 @@ export const addFav = (character) => {
        });
     };
  };
-// export function addFav(character) {
-//     return {
-//         type: ADD_FAV,
-//         payload: character
-//     }
-// };
 
 export const removeFav = (id) => {
     const endpoint = 'http://localhost:3001/rickandmorty/fav/' + id;
@@ -30,12 +24,6 @@ export const removeFav = (id) => {
        });
     };
  };
-// export function removeFav(id) {
-//     return {
-//         type: REMOVE_FAV,
-//         payload: id
-//     }
-// };
 
 export function filterCards(gender) {
     return {
