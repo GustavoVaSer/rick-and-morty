@@ -1,6 +1,11 @@
 const express = require('express');
+const getCharById = require('./controllers/getCharById');
+const login = require('./controllers/login');
 const server = express();
 const PORT = 3001;
+
+server.get("/rickandmorty/character/:id", getCharById);
+server.get("/login", login);
 
 server.listen(PORT, () => {
    console.log('Server raised in port: ' + PORT);
