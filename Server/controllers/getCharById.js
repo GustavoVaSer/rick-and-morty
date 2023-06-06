@@ -4,7 +4,7 @@ const URL = "https://rickandmortyapi.com/api/character/";
 module.exports =  async (req, res) => {
     try {
         const { id } = req.params;
-        const response = axios.get(URL + id);
+        const response = await axios.get(URL + id);
         const { status, name, species, origin, image, gender } = response.data;
         const character = { id, status, name, species, origin, image, gender }
         return character.name 
