@@ -21,6 +21,20 @@ function App() {
 
    const navigate = useNavigate();
 
+   //ASYNC/AWAIT VERSION
+   // async function login(userData) {
+   //    try {
+   //       const { email, password } = userData;
+   //       const URL = 'http://localhost:3001/rickandmorty/login/';
+   //       const { access } = (await axios(URL + `?email=${email}&password=${password}`)).data;
+   //       setAccess(access);
+   //       access && navigate('/home');
+   //    } catch (error) {
+   //       console.log(error.message);
+   //    }
+   // }
+
+   //PROMISES VERSION (DONT WORK)
    // function login(userData) {
    //    const { email, password } = userData;
    //    const URL = 'http://localhost:3001/rickandmorty/login/';
@@ -30,6 +44,8 @@ function App() {
    //       access && navigate('/home');
    //    });
    // }
+
+   // THIS ONE WORKS
    function login(userData) {
       if (userData.password === PASSWORD && userData.email === EMAIL) {
          setAccess(true);
